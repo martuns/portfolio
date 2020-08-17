@@ -45,7 +45,7 @@ app.get('/api', (req, res, next) => {
 
 
 app.post('/api/email', (req, res, next)=>{
-    sgMail.setApiKey('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');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msj = `<strong>Nombre:</strong> ${req.body.name} <br/> <strong>Email:</strong> ${req.body.email} <br/> <strong>Message:</strong> ${req.body.message} <br/>`;
 
