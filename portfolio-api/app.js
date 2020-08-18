@@ -21,21 +21,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-var whitelist = ['http://localhost:3000', 'http://localhost:3030', 'https://sendgrid.api-docs.io']
 
-
-
-var corsOptions = {
-    origin: function (origin, callback) {
-        
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-}
-app.use(cors(corsOptions))
 
 
 app.get('/api', (req, res, next) => {
@@ -50,7 +36,7 @@ app.post('/api/email', (req, res, next)=>{
     const msj = `<strong>Nombre:</strong> ${req.body.name} <br/> <strong>Email:</strong> ${req.body.email} <br/> <strong>Message:</strong> ${req.body.message} <br/>`;
 
     const msg = {
-        to: 'martin@namastek.com',
+        to: 'contacto@martinpascua.com.ar',
         from:'martin@namastek.com',
         subject: 'Website Contact from: ' + req.body.email ,
         text: req.body.email +' ' + req.body.phone + ' ' + req.body.message,
