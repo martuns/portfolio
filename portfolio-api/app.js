@@ -50,8 +50,8 @@ app.post('/api/email', (req, res, next)=>{
     const msj = `<strong>Nombre:</strong> ${req.body.name} <br/> <strong>Email:</strong> ${req.body.email} <br/> <strong>Message:</strong> ${req.body.message} <br/>`;
 
     const msg = {
-        to: 'contacto@martinpascua.com.ar',
-        from:'contacto@martinpascua.com.ar',
+        to: 'martin@namastek.com',
+        from:'martin@namastek.com',
         subject: 'Website Contact from: ' + req.body.email ,
         text: req.body.email +' ' + req.body.phone + ' ' + req.body.message,
         html: msj ,
