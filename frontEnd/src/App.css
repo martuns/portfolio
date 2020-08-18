@@ -1,0 +1,10 @@
+body {
+  background: url(bg-portfolio.jpg) no-repeat center center fixed;
+  -webkit-background: cover;
+  -moz-background: cover;
+  -moz-background: cover;
+  background: cover;
+  font-family: 'Montserrat', sans-serif;
+  
+
+}
